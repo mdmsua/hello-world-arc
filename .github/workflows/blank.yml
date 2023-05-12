@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install stress
-        run: apt install -y stress
+        run: sudo apt update && sudo apt install -y stress
       
       - name: Run stress
-        run: stress --cpu 8 --timeout 360
+        run: sudo stress --cpu 8 --timeout 360
